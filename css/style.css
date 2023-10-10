@@ -2,29 +2,101 @@
     box-sizing: border-box;
     margin: 0 auto;
 }
+            /* header */
+.desktop-menu {
+    display: none;
+    justify-content: space-between;
+}
+            /* main */
 
+            /* parte azzurra */
+            
 .content-card {
     flex-direction: column;
     
+}
+.card-large img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.text-section {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+           /* lilla */
+.img-containerlilla{
+    width: 75%; 
+    max-width: 200px; 
+    height: auto; 
 }
 
 .card-lilla img {
     width: 75%; 
     max-width: 150px; 
     height: auto; 
-    border-radius: 20%; 
+    border-radius: 25%; 
+}
+.card-lilla {
+    flex-direction: column;
+    
+}
+
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.card{
+    max-width: 250px;
+    width: 100%;
 }
 
 
 
 
 
+.image-wrapper {
+    position: relative;
+    width: 100%; 
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 10%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-position {
+    position: absolute;
+    top: 1px;  
+    right: 1px;
+}
+
+
+.section-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* mediaquery*/
 @media (min-width: 768px) {
     .card-container {
         display: flex;
         flex-direction: column;
         align-items: center; 
-    
     }
 
     .card-row {
@@ -42,9 +114,63 @@
         flex: 1;
     }
 
-    
     .card-row .card-small:not(:last-child) {
         margin-right: 1rem;
+    }
+           /* sezione testimonial*/
+    .card-lilla {
+        flex-direction: row; 
+        padding: 10px; 
+        margin-left: 4em;
+        margin-right: 4em;
+    }
+    
+    .card-lilla img {
+        margin-right: 20px; 
+    }
+
+    .text-section {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+
+    .section-content {
+        flex-direction: row; 
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 80%;
+        max-width: 100%;
+        margin: 20px 120px;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .menu-icon {
+        display: none;
+    }
+    .desktop-menu {
+        display: flex;
+    }
+
+    /* sezione azzurra */
+    .card-container {
+        max-width: 80%;
+        margin: 20px 140px;
+    }
+
+    .card-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-large {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .content-card {
@@ -53,12 +179,90 @@
     }
 
     .text-section {
-        flex: 1; 
-        align-items: flex-start; 
+        flex: 1;
+        align-items: center; 
         text-align: left; 
+        padding-right: 20px;
     }
 
     .img-section {
-        flex: 1; 
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: auto;
     }
+
+  
+
+    /* sezione lilla */
+
+    .bg-lilla {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap; 
+    }
+
+    .left-card {
+        background-color: inherit;
+        margin-right: 20px;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5em;
+        max-width: 250px;  
+        width: 100%; 
+        
+    }
+
+    .left-card > .img-containerlilla {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .card-bianca {
+        order: 3;
+        flex: 1;
+        max-width: 200px;  
+        width: 100%; 
+        margin-left: 20px;
+        margin-top: 7em;
+    }
+
+    .card-bianca >img{
+        width: 100%;
+        height: auto;
+    }
+         /* sezione testimonial*/
+
+    .card-lilla {
+        padding: 20px; 
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+
+
+    .card-containerlilla {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .card-containerlilla {
+        max-width: 80%;
+        margin: 20px 140px;
+    }
+    
+    .section-finish{
+        max-width: 80%;
+        margin: 20px 140px;
+    }
+    
 }
+
+
